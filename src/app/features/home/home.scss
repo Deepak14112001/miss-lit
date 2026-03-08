@@ -1,0 +1,98 @@
+
+
+
+.logo {
+  width: 155px;
+  height: 155px;
+
+  background-image: url("../../assets/photos/litlogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Main container */
+
+.home-container {
+  min-height: 100vh;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header layout */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand section */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo */
+
+
+
+/* Title */
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Buttons container */
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Participate button */
+
+.primary {
+  background-color: #ff4b8b;
+  color: white;
+}
+
+/* View participants button */
+
+.secondary {
+  background-color: #4a5cff;
+  color: white;
+}
+
+/* Hero section */
+
+.hero {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+
+

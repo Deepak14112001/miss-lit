@@ -1,0 +1,89 @@
+<div class="form-container">
+
+  <h2>Participate in Miss-LIT</h2>
+
+  <form [formGroup]="participantForm" (ngSubmit)="submitForm()">
+
+    <!-- Name -->
+
+    <div class="form-group">
+
+      <label>Name <span class="required">*</span></label>
+
+      <input type="text" formControlName="name">
+
+      <small class="error-message"
+      *ngIf="participantForm.get('name')?.invalid && participantForm.get('name')?.touched">
+        Name is required
+      </small>
+
+    </div>
+
+
+    <!-- DOB -->
+
+    <div class="form-group">
+
+      <label>Date of Birth <span class="required">*</span></label>
+
+      <input type="date" formControlName="dob">
+
+      <small class="error-message"
+      *ngIf="participantForm.get('dob')?.errors?.['required'] && participantForm.get('dob')?.touched">
+        Date of birth is required
+      </small>
+
+      <small class="error-message"
+      *ngIf="participantForm.get('dob')?.errors?.['ageInvalid']">
+        Age must be 18 or above
+      </small>
+
+    </div>
+
+
+    <!-- Gender -->
+
+    <div class="form-group">
+
+      <label>Gender <span class="required">*</span></label>
+
+      <select formControlName="gender">
+
+        <option value="">Select Gender</option>
+        <option>Female</option>
+
+      </select>
+
+      <small class="error-message"
+      *ngIf="participantForm.get('gender')?.invalid && participantForm.get('gender')?.touched">
+        Gender is required
+      </small>
+
+    </div>
+
+
+    <!-- Photo -->
+
+    <div class="form-group">
+
+      <label>Upload Photo <span class="required">*</span></label>
+
+      <input type="file" (change)="onFileSelect($event)">
+
+      <small class="error-message"
+      *ngIf="participantForm.get('photo')?.invalid && participantForm.get('photo')?.touched">
+        Photo is required
+      </small>
+
+    </div>
+
+
+    <!-- Submit -->
+
+    <button class="submit-btn" type="submit">
+      Submit
+    </button>
+
+  </form>
+
+</div>

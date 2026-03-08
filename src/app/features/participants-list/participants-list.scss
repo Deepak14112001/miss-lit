@@ -1,0 +1,92 @@
+/* Page container */
+
+.page-container{
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6fb;
+  min-height: 100vh;
+}
+
+ .back-btn{
+  margin-bottom:20px;
+  padding:10px 18px;
+  border:none;
+  background:#4a5cff;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Title */
+
+.title{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+/* Table wrapper */
+
+.table-container{
+  overflow-x: auto;
+}
+
+/* Table style */
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Table header */
+
+th{
+  background: #ff4b8b;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Table rows */
+
+td{
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover effect */
+
+tr:hover{
+  background-color: #f9f9f9;
+}
+
+/* Image */
+
+.photo{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff4b8b;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  th,td{
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .photo{
+    width: 50px;
+    height: 50px;
+  }
+
+ 
+}

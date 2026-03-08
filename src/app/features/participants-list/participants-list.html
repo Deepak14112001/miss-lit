@@ -1,0 +1,37 @@
+<div class="page-container">
+
+    <button (click)="backButtonClick()" class="back-btn">Back</button>
+<h2 class="title">Participants List</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>DOB</th>
+<th>Gender</th>
+<th>Photo</th>
+</tr>
+
+<tr *ngFor="let p of participants">
+
+<td>{{p.Id}}</td>
+<td>{{p.Name}}</td>
+<td>{{p.DOB}}</td>
+<td>{{p.Gender}}</td>
+
+<td>
+<img
+class="photo"
+src="http://localhost:3000/uploads/{{p.PhotoPath}}">
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
