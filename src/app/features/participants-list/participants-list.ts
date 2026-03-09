@@ -23,14 +23,21 @@ participants:any[] = [];
 
   loadParticipants(){
 
-    this.http.get<any[]>("https://gluier-toilfully-tuan.ngrok-free.dev/participants")
-    .subscribe(data => {
+  this.http.get<any[]>(
+    "https://gluier-toilfully-tuan.ngrok-free.dev/participants",
+    {
+      headers: {
+        "ngrok-skip-browser-warning": "true"
+      }
+    }
+  )
+  .subscribe(data => {
 
-      console.log(data);
+    console.log(data);
 
-      this.participants = data;
+    this.participants = data;
 
-    });
+  });
 
-  }
+}
 }
