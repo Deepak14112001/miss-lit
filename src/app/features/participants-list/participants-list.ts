@@ -23,7 +23,7 @@ participants:any[] = [];
 
   loadParticipants(){
 
-    this.http.get<any[]>("http://localhost:3000/participants")
+    this.http.get<any[]>("https://gluier-toilfully-tuan.ngrok-free.dev/participants")
     .subscribe(data => {
 
       console.log(data);

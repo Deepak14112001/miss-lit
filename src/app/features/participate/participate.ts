@@ -70,7 +70,7 @@ participantFormMethod(){
   formData.append("gender", this.participantForm.value.gender);
   formData.append("photo", this.participantForm.value.photo);
 
-  this.http.post("http://localhost:3000/participants", formData)
+  this.http.post("https://gluier-toilfully-tuan.ngrok-free.dev/participants", formData)
   .subscribe(res=>{
       console.log(res);
       alert("Participant saved");
