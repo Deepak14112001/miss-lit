@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-participate',
@@ -11,8 +12,9 @@ import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validator
 })
 export class Participate implements OnInit{
     participantForm!: FormGroup;
+    loading: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, private route:Router) {}
 
   ngOnInit() {
     this.participantFormMethod();
@@ -61,7 +63,9 @@ participantFormMethod(){
 
   }
 
- submitForm(){
+submitForm(){
+
+  this.loading = true;
 
   const formData = new FormData();
 
@@ -71,9 +75,16 @@ participantFormMethod(){
   formData.append("photo", this.participantForm.value.photo);
 
   this.http.post("https://gluier-toilfully-tuan.ngrok-free.dev/participants", formData)
-  .subscribe(res=>{
-      console.log(res);
+  .subscribe({
+    next: (res)=>{
       alert("Participant saved");
+      this.loading = false;
+      this.route.navigateByUrl("previous")
+    },
+    error: (err)=>{
+      alert("Error saving participant");
+      this.loading = false;
+    }
   });
 
 }

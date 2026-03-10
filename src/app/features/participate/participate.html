@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="form-container">
 
   <h2>Participate in Miss-LIT</h2>
@@ -80,10 +81,14 @@
 
     <!-- Submit -->
 
-    <button class="submit-btn" type="submit">
+    <button class="submit-btn" type="submit" [disabled]="loading">
       Submit
     </button>
 
   </form>
+
+  <div *ngIf="loading" class="loader">
+  ⏳ Submitting... Please wait
+</div>
 
 </div>

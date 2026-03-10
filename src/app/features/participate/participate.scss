@@ -46,3 +46,46 @@ select.ng-invalid.ng-touched {
 .submit-btn:hover {
   background: #e83b79;
 }
+
+.loader {
+  margin-top: 15px;
+  color: #ff4b8b;
+  font-weight: bold;
+}
+.form-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+  .form-container {
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+
+}

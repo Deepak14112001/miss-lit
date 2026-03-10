@@ -95,4 +95,57 @@
 }
 
 
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
+@media (max-width: 768px) {
+
+  .home-container {
+    padding: 20px;
+  }
+
+  /* Stack header vertically */
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Smaller logo */
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  /* Buttons full width */
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+}
